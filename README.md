@@ -1,4 +1,4 @@
-# [Stagger.co](https://stager-co.netlify.app)
+# [Stagger.co](https://stagger-co.netlify.app/)
 A landing page build with React, Tailwind and Framer motion.
 
 
