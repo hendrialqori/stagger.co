@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-size: 14px;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.innerWidthLG {
+  width: min(95%, 1280px);
+}
+
+.innerWidth {
+  width: min(90%, 1024px);
+}
+
+.fullViewport {
+  max-height: calc(100vh - 40%);
+}
+
+.typography-h {
+  font-size: clamp(3rem, -0.1584rem + 6.1069vw, 4rem);
+}
+
+.bg-gradient {
+  background: -webkit-linear-gradient(315deg,#8fe2bd 25%,#647eff);;
+}
+
+.text-gradient {
+    background:  -webkit-linear-gradient(315deg,#8fe2bd 25%,#647eff);;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-02 {
+  background: -webkit-linear-gradient(315deg, rgb(255, 246, 160) 20%, rgb(255, 0, 102) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  
+}
+
+.text-gradient-03 {
+  background: -webkit-linear-gradient(315deg, #93a5ff 20%, rgb(255, 6, 243) 80%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-04 {
+  background: -webkit-linear-gradient(315deg, rgb(161, 215, 251) 10%, rgb(49, 1, 146) 90%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient {
+  position: absolute;
+  width: 300px;
+  height: 350px;
+
+  background: #7aebfb;
+  filter: blur(250px);
+}
+
+.gradient-02 {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+
+  background: -webkit-linear-gradient(315deg, rgb(102, 0, 255) 0%, rgb(255, 0, 102) 100%);
+  filter: blur(190px);
+}
+
+.gradient-03 {
+  background: #7aebfb;
+  filter: blur(190px);
+}
+
+
+
+.marquee-container-left {
+  animation: marquee-left 40s linear infinite;
+}
+
+.marquee-container-right {
+  animation: marquee-right 60s linear infinite;
+}
+
+:is(.marquee-container-left, .marquee-container-right):hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee-left {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+
+}
+
+@keyframes marquee-right {
+  from {
+    transform: translateX(0px);
+  }
+  to {
+    transform: translateX(100%);
+  }
+
+}
+
+.marquee-overlay::before {
+  content: "";
+  position: absolute;
+  top:0;
+  bottom: 0;
+  left: -30px;
+  width: 100px;
+  background: black;
+  /* background: -webkit-linear-gradient(10deg, black 20%, rgba(0,0,0,0.5) 80%); */
+  z-index: 2;
+  filter: blur(50px);
+
+}
