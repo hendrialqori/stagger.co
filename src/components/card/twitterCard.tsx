@@ -3,6 +3,10 @@ import { AiOutlineTwitter } from "react-icons/ai";
 import { twitterCardVariants } from "@/utils/motion";
 import { motion } from "framer-motion";
 
+console.log('Test')
+console.log('Test')
+
+
 type Props = {
   imgUrl: string;
   index: number;
